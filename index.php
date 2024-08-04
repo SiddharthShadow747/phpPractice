@@ -63,3 +63,54 @@ class accessModifieres {
 // $acMfObj->fruitname = "Apple";
 // $acMfObj->fruitcolor = "Red";
 // $acMfObj->weight = "1";
+
+//Inheritance
+class abc {
+    public $name = '';
+    public function __construct($name)
+    {
+        $this->name = $name;
+    }
+    public function introduction(){
+        echo $this->name;
+        echo "</br>";
+    }
+}
+class bcd extends abc {
+    public function intro(){
+        echo "I'm intro method";
+    }
+}
+
+// $bcdClassObject = new bcd('strawberry');
+// $bcdClassObject->introduction();
+// $bcdClassObject->intro();
+
+//Abstract class
+abstract class language {
+    public $name = '';
+    public function __construct($name)
+    {
+        $this->name = $name;
+    }
+    abstract public function getName(): string ;
+}
+class php extends language {
+    public function getName(): string
+    {
+        return $this->name;
+    }
+}
+class ruby extends language {
+    public function getName(): string
+    {
+        return $this->name;
+    }
+}
+
+$name = new php('php');
+echo $name->getName();
+echo "</br>";
+
+$name = new php('ruby');
+echo $name->getName();
