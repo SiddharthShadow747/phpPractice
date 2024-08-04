@@ -108,9 +108,33 @@ class ruby extends language {
     }
 }
 
-$name = new php('php');
-echo $name->getName();
-echo "</br>";
+// $name = new php('Mysql');
+// echo $name->getName();
+// echo "</br>";
 
-$name = new php('ruby');
-echo $name->getName();
+// $name = new ruby('rubyyyyy');
+// echo $name->getName();
+
+// Interface
+interface Animal {
+    public function makeSound();
+}
+class cat implements Animal {
+    public function makeSound()
+    {
+        echo "Meow";
+    }
+}
+
+class dog implements Animal {
+    public function makeSound()
+    {
+        echo 'bark';
+    }
+}
+
+// $cat = new cat();
+// $cat->makeSound();
+
+// $dog = new dog();
+// $dog->makeSound();
