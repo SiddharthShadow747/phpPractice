@@ -138,3 +138,54 @@ class dog implements Animal {
 
 // $dog = new dog();
 // $dog->makeSound();
+
+//Traits
+trait test {
+    public function msg(){
+        echo "This is my msg";
+    }
+}
+
+class msg{
+    use test;
+}
+class pr{
+    use test;
+}
+
+// $msgObj = new msg();
+// $msgObj->msg();
+// $prObj = new pr();
+// $prObj->msg();
+
+//Static Methods
+class sd{
+    public static function returnmsg(){
+        echo "This is returnmsg function";
+    }
+}
+// sd::returnmsg();
+
+// static properties
+class pi {
+    public static $a = "Hippo";
+    public static function pr(){
+        return self::$a;
+    }
+}
+
+// $rsValues = pi::pr();
+// echo $rsValues;
+
+class x {
+    public static $b = 'Apple';
+}
+
+class y extends x {
+    public static function c(){
+        return parent::$b;
+    }
+}
+
+// $val = y::c();
+// echo $val;
